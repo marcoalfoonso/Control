@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     /*const axesHelper = new THREE.AxesHelper(1.4);
     scene.add(axesHelper);*/
-    camera.position.set(0.8,0.7,1.8);
+    camera.position.set(1,1.2,-1.3);
+    camera.lookAt(0,0,0);
 
     const grid = new THREE.GridHelper(3,8);
     scene.add(grid);
@@ -114,13 +115,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //forward kinematics
 
-    let x1 = l1 * Math.cos(-q1) * Math.cos(q2);
+    let x1 = l1 * Math.cos(q1) * Math.cos(q2);
     let y1 = b1+b2+l1*Math.sin(q2);
-    let z1 = -l1*Math.sin(-q1)*Math.cos(q2);
+    let z1 = -l1*Math.sin(q1)*Math.cos(q2);
 
-    let x2 = Math.cos(-q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
+    let x2 = Math.cos(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
     let y2 = b1+b2+l1*Math.sin(q2)+l2*Math.sin(q2-q3);
-    let z2 = -Math.sin(-q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
+    let z2 = -Math.sin(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
 
 
     //creating vectores for points and lines
@@ -262,13 +263,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function animate(){
 
-        x1 = l1 * Math.cos(-q1) * Math.cos(q2);
+        x1 = l1 * Math.cos(q1) * Math.cos(q2);
         y1 = b1+b2+l1*Math.sin(q2);
-        z1 = -l1*Math.sin(-q1)*Math.cos(q2);
+        z1 = -l1*Math.sin(q1)*Math.cos(q2);
 
-        x2 = Math.cos(-q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
+        x2 = Math.cos(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
         y2 = b1+b2+l1*Math.sin(q2)+l2*Math.sin(q2-q3);
-        z2 = -Math.sin(-q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
+        z2 = -Math.sin(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
 
         p2.set(x1,y1,z1);
         ef.set(x2,y2,z2);
