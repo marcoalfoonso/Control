@@ -118,9 +118,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let y1 = b1+b2+l1*Math.sin(q2);
     let z1 = -l1*Math.sin(q1)*Math.cos(q2);
 
-    let x2 = Math.cos(q1)*(l2*Math.cos(q2+q3)+l1*Math.cos(q2));
-    let y2 = b1+b2+l1*Math.sin(q2)+l2*Math.sin(q2+q3);
-    let z2 = -Math.sin(q1)*(l2*Math.cos(q2+q3)+l1*Math.cos(q2));
+    let x2 = Math.cos(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
+    let y2 = b1+b2+l1*Math.sin(q2)+l2*Math.sin(q2-q3);
+    let z2 = -Math.sin(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
 
 
     //creating vectores for points and lines
@@ -266,9 +266,9 @@ document.addEventListener("DOMContentLoaded", function(){
         y1 = b1+b2+l1*Math.sin(q2);
         z1 = -l1*Math.sin(q1)*Math.cos(q2);
 
-        x2 = Math.cos(q1)*(l2*Math.cos(q2+q3)+l1*Math.cos(q2));
-        y2 = b1+b2+l1*Math.sin(q2)+l2*Math.sin(q2+q3);
-        z2 = -Math.sin(q1)*(l2*Math.cos(q2+q3)+l1*Math.cos(q2));
+        x2 = Math.cos(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
+        y2 = b1+b2+l1*Math.sin(q2)+l2*Math.sin(q2-q3);
+        z2 = -Math.sin(q1)*(l2*Math.cos(q2-q3)+l1*Math.cos(q2));
 
         p2.set(x1,y1,z1);
         ef.set(x2,y2,z2);
