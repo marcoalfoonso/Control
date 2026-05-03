@@ -30,11 +30,22 @@ client.on("error", (err) => {
 //scene, camera, renderer
 document.addEventListener("DOMContentLoaded", function(){
 
+    window.addEventListener("resize", () => {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    });
+
+    const container = document.getElementById("scope");
+
     const renderer = new THREE.WebGLRenderer();
 
-    renderer.setSize(window.innerWidth*0.40,window.innerHeight*0.65);
+    renderer.setSize(container.clientWidth, container.clientHeight);
 
-    document.body.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
 
@@ -76,6 +87,15 @@ document.addEventListener("DOMContentLoaded", function(){
     const g1 = document.getElementById("q1");
     const g2 = document.getElementById("q2");
     const g3 = document.getElementById("q3");
+
+    ["q1","q2","q3"].forEach(id => {
+        const slider = document.getElementById(id);
+        const label = document.getElementById(id+"val");
+
+        slider.addEventListener("input", () => {
+            label.textContent = slider.value + "°";
+        });
+    });
 
     let lastSend = 0;
     let lastSend2 = 0;
