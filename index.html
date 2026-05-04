@@ -1,49 +1,43 @@
-🧱Robot de tres grados de libertad
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
-    <link rel="stylesheet" href="design.css">
-    <title>Robot Control</title>
+  <link rel="stylesheet" href="design.css">
+  <title>Robot Control</title>
 </head>
 
 <body>
 
 <header class="header">
-    <h1>Robot Control</h1>
-    <div class="status">● Conectado</div>
+  <h1>Robot</h1>
+  <div class="status">● Online</div>
 </header>
 
-<div class="layout">
+<!-- Vista 3D arriba -->
+<div id="scope"></div>
 
-    <!-- Panel de control -->
-    <div class="panel">
+<!-- Controles abajo -->
+<div class="controls">
 
-        <div class="control">
-            <label>q1 <span id="q1val">90°</span></label>
-            <input type="range" id="q1" min="0" max="180">
-        </div>
+  <div class="control">
+    <label>q1 <span id="q1val">90°</span></label>
+    <input type="range" id="q1" min="0" max="180">
+  </div>
 
-        <div class="control">
-            <label>q2 <span id= "q2val">90°</span></label>
-            <input type="range" id="q2" min="0" max="180">
-        </div>
+  <div class="control">
+    <label>q2 <span id="q2val">90°</span></label>
+    <input type="range" id="q2" min="0" max="180">
+  </div>
 
-        <div class="control">
-            <label>q3 <span id="q3val">90°</span></label>
-            <input type="range" id="q3" min="0" max="180">
-        </div>
-
-    </div>
-
-    <!-- Vista 3D -->
-    <div id="scope"></div>
+  <div class="control">
+    <label>q3 <span id="q3val">90°</span></label>
+    <input type="range" id="q3" min="0" max="180">
+  </div>
 
 </div>
 
