@@ -30,42 +30,35 @@ client.on("error", (err) => {
 //scene, camera, renderer
 document.addEventListener("DOMContentLoaded", function(){
 
-    window.addEventListener("resize", () => {
+    const container = document.getElementById("scope");
+    const renderer = new THREE.WebGLRenderer({antialias:true});
+    container.appendChild(renderer.domElement);
+    
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+        100,
+        1,
+        0.1,
+        1000
+    );
+
+    camera.position.set(1,1.2,-1.3);
+    camera.lookAt(0,0,0);
+
+    const grid = new THREE.GridHelper(3,8);
+    scene.add(grid);
+
+    function resize(){
         const width = container.clientWidth;
         const height = container.clientHeight;
 
         renderer.setSize(width, height);
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
-    });
+    }
 
-    const container = document.getElementById("scope");
-
-    const renderer = new THREE.WebGLRenderer();
-
-    renderer.setSize(container.clientWidth, container.clientHeight);
-
-    container.appendChild(renderer.domElement);
-
-    const scene = new THREE.Scene();
-
-    const camera = new THREE.PerspectiveCamera(
-        100,
-        window.innerWidth/window.innerHeight,
-        0.1,
-        1000
-    );
-
-
-    //axis helper, comera position, grid helper
-
-    /*const axesHelper = new THREE.AxesHelper(1.4);
-    scene.add(axesHelper);*/
-    camera.position.set(1,1.2,-1.3);
-    camera.lookAt(0,0,0);
-
-    const grid = new THREE.GridHelper(3,8);
-    scene.add(grid);
+    resize();
+    window.addEventListener("resize", resize);
 
     //box geometry, material, mesh, add to scene, position
 
