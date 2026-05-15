@@ -9,3 +9,6 @@ Como parte central del proyecto, se desarrolló un gemelo digital utilizando Thr
 Adicionalmente, el proyecto incluye transmisión de video en tiempo real mediante WebSockets y OpenCV, permitiendo visualizar el entorno del robot desde cualquier dispositivo conectado a internet. Para ello, se desarrolló un servidor desplegado en Render que recibe imágenes desde una cámara conectada al sistema y las retransmite hacia una interfaz HTML adaptable a dispositivos móviles. Esta integración convierte al sistema en una plataforma completa de teleoperación, donde el usuario puede observar simultáneamente el robot físico y su representación digital.
 
 El desarrollo de este proyecto involucró conceptos de robótica, cinemática, diseño mecánico, electrónica de potencia, programación web y comunicación en red, integrando múltiples tecnologías dentro de una misma arquitectura. El resultado es una plataforma modular y escalable que puede servir como base para futuras aplicaciones de automatización, control remoto, investigación académica y desarrollo de sistemas robóticos educativos. 
+
+El repositorio de github donde se encuentran los códigos de transmición de video se encuentra en la siguiente liga:
+https://github.com/marcoalfoonso/GETimage
