@@ -1,2 +1,11 @@
-# Control
-a 3d twin from a 3dol robot
+# Robot Manipulador de 3 GDL con Control Remoto, Gemelo Digital y Visualización en Tiempo Real
+
+Este proyecto consiste en el desarrollo de un robot manipulador de tres grados de libertad (3 GDL) controlado remotamente a través de internet mediante protocolos de comunicación MQTT y herramientas de visualización web en tiempo real. El sistema integra electrónica, modelado cinemático, programación embebida, visualización 3D y transmisión de video, con el objetivo de construir una plataforma funcional de teleoperación robótica de bajo costo y alta flexibilidad.
+
+El robot físico utiliza servomotores de alto torque para accionar cada articulación, permitiendo movimientos coordinados del manipulador en un espacio tridimensional. El control del sistema es realizado mediante un microcontrolador ESP32, encargado de recibir comandos desde una interfaz web y transmitir las posiciones articulares a través de MQTT. La arquitectura implementada permite una comunicación bidireccional entre el robot y el entorno web, facilitando tanto el control remoto como la supervisión del estado del sistema en tiempo real.
+
+Como parte central del proyecto, se desarrolló un gemelo digital utilizando Three.js, el cual representa gráficamente el comportamiento cinemático del robot en un entorno tridimensional interactivo. La animación del manipulador se realiza mediante transformaciones jerárquicas y cinemática directa, permitiendo replicar visualmente el movimiento de cada articulación conforme se reciben datos desde MQTT. Además, el sistema incorpora iluminación, materiales y geometrías tridimensionales para mejorar la representación visual del robot y facilitar la comprensión de su movimiento y orientación espacial.
+
+Adicionalmente, el proyecto incluye transmisión de video en tiempo real mediante WebSockets y OpenCV, permitiendo visualizar el entorno del robot desde cualquier dispositivo conectado a internet. Para ello, se desarrolló un servidor desplegado en Render que recibe imágenes desde una cámara conectada al sistema y las retransmite hacia una interfaz HTML adaptable a dispositivos móviles. Esta integración convierte al sistema en una plataforma completa de teleoperación, donde el usuario puede observar simultáneamente el robot físico y su representación digital.
+
+El desarrollo de este proyecto involucró conceptos de robótica, cinemática, diseño mecánico, electrónica de potencia, programación web y comunicación en red, integrando múltiples tecnologías dentro de una misma arquitectura. El resultado es una plataforma modular y escalable que puede servir como base para futuras aplicaciones de automatización, control remoto, investigación académica y desarrollo de sistemas robóticos educativos. 
