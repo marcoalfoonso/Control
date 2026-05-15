@@ -16,3 +16,17 @@ https://github.com/marcoalfoonso/GETimage
 <p align="center">
   <img src="https://github.com/marcoalfoonso/Control/blob/main/robotuno.jpeg" width="500">
 </p>
+
+<p align="center">
+  <img src="https://github.com/marcoalfoonso/Control/blob/main/robotdos.jpeg" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/marcoalfoonso/Control/blob/main/robottres.jpeg" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/marcoalfoonso/Control/blob/main/robot4.jpeg" width="500">
+</p>
+
+
