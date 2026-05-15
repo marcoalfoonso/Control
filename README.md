@@ -12,3 +12,7 @@ El desarrollo de este proyecto involucró conceptos de robótica, cinemática, d
 
 El repositorio de github donde se encuentran los códigos de transmición de video se encuentra en la siguiente liga:
 https://github.com/marcoalfoonso/GETimage
+
+<p align="center">
+  <img src="https://github.com/marcoalfoonso/Control/blob/main/robotuno.jpeg" width="500">
+</p>
